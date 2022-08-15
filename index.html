@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobTalk</title>
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
+    <link href="SVG Icon/job.svg" rel="icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="sidenav">
+            <a href="#" ><img src="logo.png" alt="" id="home"></a>
+            <ul>
+                <li><a href="#"><img src="SVG Icon/home.svg" alt="icon home" >&ensp;Accueil</a></li>
+                <li ><a href="#" class="activePage"><img src="SVG Icon/job.svg" alt="icon job" >&ensp;Les jobs</a></li>
+                <li><a href="#"><img src="SVG Icon/message.svg" alt="icon message" >&ensp;Messages</a></li>
+            </ul>
+            <a href="#" id="deco"><img src="SVG Icon/logout.svg" alt="icon logout" >&ensp; Déconnexion</a>
+        </div>
+    </header>
+    <main>
+        <div id="user">
+            <img src="SVG Icon/notif.svg" alt="">
+            <span> &ensp;<b>Eva Barnett</b>&ensp;</span>
+            <img src="SVG Icon/arrow.svg" alt="">
+        </div>
+        <div id="title">
+            <h2>Les jobs</h2>
+            <button>Imprimer la page</button>
+        </div>
+        <div id="drop">
+            <div>
+                <div class="dropdown">
+                    <button onclick="Drop('1')" class="dropbtn">Poste &emsp;<img src="SVG Icon/arrow.svg" alt="" ></button>
+                    <div id="dropdown1" class="dropdown-content">
+                        <div class="inputCheckbox"  onclick="Checked()">
+                            <input type="checkbox" id="frontend" name="Front-end" class="fix" value="jobTitle">
+                            <label for="Front-end" >Développeur Front-End</label>
+                        </div>
+                        <div class="inputCheckbox" onclick="Checked()">
+                            <input type="checkbox" id="backend" name="Back-end" class="fix" value="jobTitle">
+                            <label for="Back-end" class="fix">Développeur Back-End</label>
+                        </div>
+                        <div class="inputCheckbox" onclick="Checked()">
+                            <input type="checkbox" id="fullstack" name="Full-Stack" class="fix" value="jobTitle">
+                            <label for="Full-Stack" class="fix">Développeur Full-Stack</label>
+                        </div>
+                        <div class="inputCheckbox" onclick="Checked()">
+                            <input type="checkbox" id="manager" name="Projet / Product Management" class="fix" value="jobTitle">
+                            <label for="Projet / Product Management" class="fix">Projet / Product Management</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="Drop('2')" class="dropbtn">Contrat &emsp;<img src="SVG Icon/arrow.svg" alt=""></button>
+                    <div id="dropdown2" class="dropdown-content">
+                        <div class="inputCheckbox" onclick="Checked()">
+                            <input type="checkbox" id="cdi" name="CDI" class="fix" value="contractType">
+                            <label for="CDI" class="fix">CDI</label>
+                        </div>
+                        <div class="inputCheckbox" onclick="Checked()">
+                            <input type="checkbox" id="cdd" name="CDD" class="fix" value="contractType">
+                            <label for="CDD" class="fix">CDD</label>
+                        </div>
+                        <div class="inputCheckbox" onclick="Checked()">
+                            <input type="checkbox" id="stage" name="Stage" class="fix" value="contractType">
+                            <label for="Stage" class="fix">Stage</label>
+                        </div>
+                        <div class="inputCheckbox" onclick="Checked()">
+                            <input type="checkbox" id="alternance" name="Alternance" class="fix" value="contractType">
+                            <label for="Alternance" class="fix">Alternance</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="Drop('3')" class="dropbtn">Télétravail &emsp;<img src="SVG Icon/arrow.svg" alt=""></button>
+                    <div id="dropdown3" class="dropdown-content">
+                        <div class="inputCheckbox" onclick="Checked()">
+                            <input type="checkbox" id="none" name="Présentiel" class="fix" value="remoteWork">
+                            <label for="Présentiel" class="fix">Présentiel</label>
+                        </div>
+                        <div class="inputCheckbox" onclick="Checked()">
+                            <input type="checkbox" id="eventually" name="Télétravail ponctuel" class="fix" value="remoteWork">
+                            <label for="Télétravail ponctuel" class="fix">Télétravail ponctuel</label>
+                        </div>
+                        <div class="inputCheckbox" onclick="Checked()">
+                            <input type="checkbox" id="regularly" name="Télétravail partiel" class="fix" value="remoteWork">
+                            <label for="Télétravail partiel" class="fix">Télétravail partiel</label>
+                        </div>
+                        <div class="inputCheckbox" onclick="Checked()">
+                            <input type="checkbox" id="full" name="Télétravail total" class="fix" value="remoteWork">
+                            <label for="Télétravail total" class="fix">Télétravail total</label>
+                        </div>
+                        <div class="inputCheckbox" onclick="Checked()">
+                            <input type="checkbox" id="unknown" name="Non renseigné" class="fix" value="remoteWork">
+                            <label for="Non renseigné" class="fix">Non renseigné</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <label for="sort">Trier par :</label>
+                <select name="sort" id="sort" onclick="Checked()" >
+                        <option value="date" >Date</option>
+                        <option value="salaire">Salaire</option>
+                </select>
+            </div>
+        </div>
+        <div id="filter">
+        </div>
+        <div id="annonces">
+        </div>
+    </main>
+</body>
+</html>
